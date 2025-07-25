@@ -65,11 +65,10 @@ header p {}
 }
 #wrap .swiper-wrapper .profile .container .photo_info .top .info p:nth-child(2) {}
 #wrap .swiper-wrapper .profile .container .photo_info .bottom {
-    padding:0 15px;
+    display:flex; flex-flow:column nowrap; gap:10px;
 }
-#wrap .swiper-wrapper .profile .container .photo_info .bottom p {
-    margin-top:10px;
-}
+#wrap .swiper-wrapper .profile .container .photo_info .bottom a {}
+#wrap .swiper-wrapper .profile .container .photo_info .bottom a:hover {color: #1990FF;}
 /* 경력 + 스킬 등등.. */
 #wrap .swiper-wrapper .profile .container .resume {display:flex;}
 #wrap .swiper-wrapper .profile .container .resume .left {
@@ -192,10 +191,10 @@ header p {}
     font-size:2.625rem; font-weight:500;
 }
 /* 사용 프로그램 */
-#wrap .swiper-wrapper .project .container #project_swiper .swiper-slide .contents .info {}
-#wrap .swiper-wrapper .project .container #project_swiper .swiper-slide .contents .info li {
-    margin-bottom:30px;
+#wrap .swiper-wrapper .project .container #project_swiper .swiper-slide .contents .info {
+    display:flex; flex-flow:column nowrap; gap:20px;
 }
+#wrap .swiper-wrapper .project .container #project_swiper .swiper-slide .contents .info li {}
 /* 마지막 li 여백x */
 #wrap .swiper-wrapper .project .container #project_swiper .swiper-slide .contents .info li:last-child {
     margin-bottom:0;
@@ -211,13 +210,37 @@ header p {}
 /* 버튼 */
 #wrap .swiper-wrapper .project .container #project_swiper .swiper-slide .contents .btn {}
 #wrap .swiper-wrapper .project .container #project_swiper .swiper-slide .contents .btn a {
-    padding:17px 22px;
-    line-height: 48px;
+    display:inline-flex;
+    position:relative;/* 가상선택자 */
+    padding:0 22px;
+    line-height:48px;
     border-radius:50px;
+    height:48px;
     font-size:1.125rem;
     font-weight:500;
     color:#fff;
     margin-right:21px;
+    transition: all 0.3s ease;
+}
+#wrap .swiper-wrapper .project .container #project_swiper .swiper-slide .contents .btn a::after {
+    content:'';
+    position:absolute; right:20px; top:50%;
+    background:url(../images/icon_go_w.png) center no-repeat;
+    transform:translateY(-50%);
+    width:26px; height:26px;
+    opacity:0;
+    transition: all 0.2s ease;
+}
+#wrap .swiper-wrapper .project .container #project_swiper .swiper-slide .contents .btn a:nth-of-type(3)::after {
+    background:url(../images/icon_go_b.png) center no-repeat;
+}
+/* 버튼에 hover를 했을 때 */
+#wrap .swiper-wrapper .project .container #project_swiper .swiper-slide .contents .btn a:hover {
+    padding-right:60px;
+    justify-content:flex-start;
+}
+#wrap .swiper-wrapper .project .container #project_swiper .swiper-slide .contents .btn a:hover::after {
+    opacity:1;
 }
 #wrap .swiper-wrapper .project .container #project_swiper .swiper-slide .contents .btn a:nth-of-type(1) {
     background:#1990FF;
