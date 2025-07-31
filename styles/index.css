@@ -282,6 +282,31 @@ header p {}
 #wrap .swiper-wrapper .project .container .swiper-scrollbar {}
 
 /* -------------------------------------------------------------------sns 4행 */
+/* 꾸미기 */
+#wrap .swiper-wrapper .design .circle1 {
+    position:absolute;
+    top:50%; left: 141px;
+    width: 157px;
+    height: 157px;
+    border:1px solid #000;
+    border-radius: 50%;
+}
+#wrap .swiper-wrapper .design .circle2 {
+    position:absolute;
+    bottom: 288px;; right: 140px;
+    width: 60px;
+    height: 60px;
+    border:1px solid #000;
+    border-radius: 50%;
+}
+#wrap .swiper-wrapper .design .circle3 {
+    position:absolute;
+    bottom: 100px;; right: 170px;
+    width: 176px;
+    height: 176px;
+    background: #1990FF;
+    border-radius: 50%;
+}
 #wrap .swiper-wrapper .design .container {
     position: absolute;
     top: 55%;
