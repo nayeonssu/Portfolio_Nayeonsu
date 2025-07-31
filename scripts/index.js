@@ -1,7 +1,9 @@
+window.alert('이 웹페이지는 포트폴리오 페이지입니다.')
 //전체 수직 스크롤
 const wrap = new Swiper('#wrap',{
     direction : 'vertical',
     mousewheel : true,
+    speed:1000,
 })/* 스와이퍼가 될 대상의 전체묶음 */
 
 //프로젝트 슬라이드
