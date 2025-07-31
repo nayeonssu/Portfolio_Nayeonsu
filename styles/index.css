@@ -31,10 +31,10 @@ header p {}
 }
 #wrap .swiper-wrapper .profile {position:relative;}
 #wrap .swiper-wrapper .project {position:relative;}
-/* ----------------------intro 1행 */
+/* -------------------------------------------------------------------intro 1행 */
 #wrap .swiper-wrapper .intro img:nth-child(1) {position:absolute; top:65px; left:0;}
 #wrap .swiper-wrapper .intro img:nth-child(3) {position:absolute; bottom:65px; right:0;}
-/* ----------------------profile 2행 */
+/* -------------------------------------------------------------------profile 2행 */
 #wrap .swiper-wrapper .profile .container {
     width:78%;
     position: absolute;
@@ -157,7 +157,7 @@ header p {}
     column-gap:44px;
 }
 
-/* ----------------------project 3행 */
+/* -------------------------------------------------------------------project 3행 */
 #wrap .swiper-wrapper .project .container {
     position: absolute;
     top: 55%;
@@ -280,3 +280,55 @@ header p {}
 
 /* 스크롤바 */
 #wrap .swiper-wrapper .project .container .swiper-scrollbar {}
+
+/* -------------------------------------------------------------------sns 4행 */
+#wrap .swiper-wrapper .design .container {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* ------------------------가로 배너 */
+#wrap .swiper-wrapper .design .container #transverse_swiper {
+    width:1440px; height:173px; margin-bottom:20px;
+}
+#wrap .swiper-wrapper .design .container #transverse_swiper .swiper-wrapper {}
+#wrap .swiper-wrapper .design .container #transverse_swiper .swiper-wrapper .swiper-slide {
+    cursor:pointer;
+}
+#wrap .swiper-wrapper .design .container #transverse_swiper .swiper-wrapper .swiper-slide img {
+    width: 100%;
+}
+/* ------------------------세로 배너 */
+#wrap .swiper-wrapper .design .container #length_swiper {
+    width:1440px; height:370px;/* width는 스와이퍼 보이는 영역 넓이를 잡고 margin은 바깥쪽 여백을 잡은것이다. */
+}
+/* 중간에 swiper-wrapper생략 */
+#wrap .swiper-wrapper .design .container #length_swiper .swiper-wrapper {
+    transition-timing-function:linear;/* 일정속도 세팅 */
+}
+#wrap .swiper-wrapper .design .container #length_swiper .swiper-wrapper .swiper-slide {
+    cursor:pointer;/* 눌려지는 것처럼 보이게 손가락 모양이 나옴 */
+}
+#wrap .swiper-wrapper .design .container #length_swiper .swiper-wrapper .swiper-slide img {
+    width: 100%;/* js때문에 겹쳐져있던 이미지들을 보기좋게 정렬해준다 */
+}
+
+/* 디자인팝업 */
+.popup_bg {
+    position:fixed; left:0; top: 0;/* 1. 위치고정 */
+    z-index:800;/* 안겹치도록 위로 올라오게 설정 */
+    width:100%; height:100vh;/* 배경 크기설정 */
+    background:rgba(0, 0, 0, 0.5);/* 배경색 */
+    display:none;/* 처음 안보이는 설정 */
+}
+.popup_bg .popup {
+    width:600px; margin:0 auto;
+    height:80vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow:auto;/* 정해진 영역 안에서 보이도록 하면 스크롤이 생긴다. */
+}
+.popup_bg .popup img {width:100%;}
