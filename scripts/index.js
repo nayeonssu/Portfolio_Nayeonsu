@@ -1,4 +1,4 @@
-window.alert('이 웹페이지는 포트폴리오 페이지입니다.')
+/* window.alert('이 웹페이지는 포트폴리오 페이지입니다.') */
 //전체 수직 스크롤
 const wrap = new Swiper('#wrap',{
     direction : 'vertical',
