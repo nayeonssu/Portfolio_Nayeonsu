@@ -9,7 +9,7 @@ const wrap = new Swiper('#wrap',{
 //프로젝트 슬라이드
 const project1 = new Swiper('#project_swiper',{
     scrollbar:{el:'#project_swiper ~ .swiper-scrollbar'},/* 스크롤바 */
-    autoplay:{delay:3000},/* 속도 */
+    autoplay:{delay:4000},/* 속도 */
     loop:true,/* 무한반복 */
 })
 
